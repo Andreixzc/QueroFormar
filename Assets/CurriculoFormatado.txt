@@ -1,0 +1,345 @@
+1
+Algoritmos e Estruturas de Dados I
+120
+none
+AEDs1
+*
+1
+Cálculo I
+80
+none
+C1
+*
+1
+Introdução à Computação (extensionista)
+70
+none
+IC
+*
+1
+Lab. de Iniciação à Programação
+40
+none
+LIP
+*
+1
+Optativa I
+80
+none
+O1
+*
+1
+Trab. Interdisciplinar: Aplicações Web
+50
+none
+TI1
+*
+2
+Algoritmos e Estruturas de Dados II
+120
+Algoritmos e Estruturas de Dados I
+AEDs2
+*
+2
+Arquitetura de Computadores I
+80
+Algoritmos e Estruturas de Dados I
+AC1
+*
+2
+Bancos de Dados
+80
+Algoritmos e Estruturas de Dados I
+BD
+*
+2
+Cultura Religiosa: Fenômeno Religioso
+40
+none
+CR:FR
+*
+2
+Introdução aos Sistemas Inteligentes
+80
+none
+ISI
+*
+2
+Trab. Interdisciplinar II: BD e S. Inteligentes
+30
+Algoritmos e Estruturas de Dados II (CO)
+Bancos de Dados (CO)
+TI2
+*
+3
+Algoritmos e Estruturas de Dados III
+80
+Algoritmos e Estruturas de Dados II
+AEDs3
+*
+3
+Arquitetura de Computadores II
+80
+Arquitetura de Computadores I
+AC2
+*
+3
+Cálculo II
+80
+Cálculo I
+C2
+*
+3
+Engenharia de Software I
+80
+Algoritmos e Estruturas de Dados II (CO)
+Trab. Interdisciplinar II: BD e S. Inteligentes
+ES1
+*
+3
+Linguagens de Programação
+80
+Algoritmos e Estruturas de Dados II
+LP
+*
+3
+Trab. Interdisciplinar III: Pesquisa Aplicada
+30
+Algoritmos e Estruturas de Dados II (CO)
+Trab. Interdisciplinar II: BD e S. Inteligentes
+TI3
+*
+4
+Estatística e Probabilidade
+80
+Cálculo I
+EP
+*
+4
+Inteligência Artificial
+80
+Estatística e Probabilidade (CO)
+Teoria dos Grafos e Computabilidade (CO)
+IA
+*
+4
+Lab. de Desenvol. para Dispositivos Móveis
+40
+Algoritmos e Estruturas de Dados II
+LDDM
+*
+4
+Modelagem e Avaliação de Desempenho
+80
+Estatística e Probabilidade (CO)
+Teoria dos Grafos e Computabilidade (CO)
+MAD
+*
+4
+Optativa II
+80
+none
+O2
+*
+4
+Teoria dos Grafos e Computabilidade
+120
+Algoritmos e Estruturas de Dados II
+TGC
+*
+4
+Trab. Interdisciplinar IV: Aplicações Móveis
+30
+Inteligência Artificial (CO)
+Lab. de Desenvol. para Disp. Móveis (CO)
+TI4
+*
+5
+Arquitetura de Computadores III
+80
+Arquitetura de Computadores II
+AC3
+*
+5
+Engenharia de Software II
+80
+Engenharia de Software I
+ES2
+*
+5
+Optativa III
+80
+none
+O3
+*
+5
+Projeto e Análise de Algoritmos
+80
+Teoria dos Grafos e Computabilidade
+Estatística e Probabilidade (CO)
+PAA
+*
+5
+Redes de Computadores I
+80
+Teoria dos Grafos e Computabilidade
+R1
+*
+5
+Sistemas Operacionais
+80
+Algoritmos e Estruturas de Dados II
+Arquitetura de Computadores II
+SO
+*
+5
+Trab. Interdisciplinar V: Sist. Computacionais
+30
+Redes de Computadores I (CO)
+Arquitetura de Computadores III (CO)
+Sistemas Operacionais (CO)
+TI5
+*
+6
+Computação Distribuída
+60
+Redes de Computadores I
+CD
+*
+6
+Computação Paralela
+60
+Algoritmos e Estruturas de Dados III
+Arquitetura de Computadores III
+CP
+*
+6
+Filosofia: Razão e Modernidade
+40
+Filosofia: Razão e Modernidade
+F:RM
+*
+6
+Fundamentos Teóricos da Computação
+80
+Teoria dos Grafos e Computabilidade
+FTC
+*
+6
+Geometria Analítica e Álgebra Linear
+80
+none
+GAAL
+*
+6
+Processamento e Análise de Imagens
+80
+Projeto e Análise de Algoritmos (CO)
+PAI
+*
+6
+Trab. Interdisciplinar VI: Sist. Paral. e Distrib.
+30
+Computação Paralela (CO)
+Computação Distribuída (CO)
+TI6
+*
+7
+Compiladores
+80
+Fundamentos Teóricos da Computação
+Arquitetura de Computadores II
+COMP
+*
+7
+Computação Gráfica
+80
+Algoritmos e Estruturas de Dados II
+Geometria Analítica e Álgebra Linear
+CG
+*
+7
+Filosofia: Antropologia e Ética
+80
+none
+F:AE
+*
+7
+Redes de Computadores II
+80
+Redes de Computadores I
+R2
+*
+7
+Tópicos em Computação I
+40
+Projeto e Análise de Algoritmos
+S1
+*
+7
+Tópicos em Computação II
+40
+Projeto e Análise de Algoritmos
+TC1
+*
+7
+Tópicos em Computação III
+40
+Projeto e Análise de Algoritmos
+TC2
+*
+7
+Trabalho de Conclusão de Curso I
+80
+Projeto e Análise de Algoritmos
+TCC1
+*
+8
+Computadores e Sociedade
+40
+none
+CS
+*
+8
+Cultura Religiosa: Pessoa e Sociedade
+40
+none
+CR:PS
+*
+8
+Optativa IV
+80
+none
+O4
+*
+8
+Otimização de Sistemas
+80
+Teoria dos Grafos e Computabilidade
+Geometria Analítica e Álgebra Linear
+OS
+*
+8
+Segurança e Auditoria de Sistemas
+60
+Engenharia de Software II
+SAS
+*
+8
+Tópicos em Computação IV
+40
+Projeto e Análise de Algoritmos
+S2
+*
+8
+Tópicos em Computação V
+40
+Projeto e Análise de Algoritmos
+TC3
+*
+8
+Trabalho de Conclusão de Curso II
+90
+Trabalho de Conclusão de Curso I
+TCC2
+*

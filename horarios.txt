@@ -1,0 +1,84 @@
+Segunda - 07:00 - 08:40 - LAB AEDs I (T1/G1) - WALISSON
+Terça - 07:00 - 08:40 - Cálculo I (T1)
+Quarta - 07:00 - 08:40 - AEDs I (T1) - WALISSON
+Quinta - 07:00 - 08:40 - Cálculo I (T1)
+Sexta - 07:00 - 08:40 - Filosofia: R.M. (T1)
+Segunda - 08:50 - 10:30 - AEDs I (T1) - WALISSON
+Terça - 08:50 - 10:30 - IC (T1) - FELIPE
+Quinta - 08:50 - 10:30 - LAB AEDs I (T1/G2) - WALISSON
+Quarta - 10:40 - 12:20 - LIP (G1) - PEDRO
+Quinta - 10:40 - 12:20 - LAB AEDs I (T1/G4)
+Segunda - 07:00 - 08:40 - LAB AEDs I (T2/G1) - THELDO
+Terça - 07:00 - 08:40 - Cálculo I (T1)
+Quinta - 07:00 - 08:40 - LAB AEDs I (T1/G2)
+Sexta - 07:00 - 08:40 - LIP (T2G2) - JOAO PAULO
+Segunda - 08:50 - 10:30 - AEDs I (T2) - THELDO
+Terça - 08:50 - 10:30 - Cálculo I (T2)
+Quinta - 08:50 - 10:30 - LAB AEDs I (T2/G3) - THELDO
+Sexta - 08:50 - 10:30 - Filosofia: R.M. (T2)
+Segunda - 10:40 - 12:20 - LAB AEDs I (T2/G1) - THELDO
+Terça - 10:40 - 12:20 - LAB AEDs I (T2/G2) - THELDO
+Quinta - 10:40 - 12:20 - LAB AEDs I (T2/G4) - THELDO
+Sexta - 10:40 - 12:20 - LIP (T2G3) - JOAO PAULO
+Segunda - 13:30 - 15:10 - TI1
+Segunda - 15:20 - 17:00 - AEDs I - THELDO
+Terça - 15:20 - 17:00 - Cálculo I (T1)
+Quarta - 15:20 - 17:00 - Filosofia: R.M. (T1)
+Segunda - 17:10 - 18:50 - LIP (G1)
+Terça - 17:10 - 18:50 - Cálculo I (T2)
+Quinta - 17:10 - 18:50 - LIP (G3) - AMALIA
+Segunda - 13:30 - 15:10 - LAB AEDs I (G1) - THELDO
+Quinta - 13:30 - 15:10 - LAB AEDs I (T1/G2)
+Terça - 15:20 - 17:00 - IC - FÁTIMA
+Sexta - 15:20 - 17:00 - LIP (T2G3) - JOAO PAULO
+Segunda - 17:10 - 18:50 - LAB.AEDs II (T1/G2) - CIDA
+Quarta - 17:10 - 18:50 - LAB.AEDs II (T1/G3) - PEDRO RAMOS
+Segunda - 07:00 - 08:40 - AEDs II (T1) - MAX
+Quarta - 07:00 - 08:40 - ES1 (T1) - Humberto
+Quinta - 07:00 - 08:40 - ES1 (T1) - Humberto
+Sexta - 07:00 - 08:40 - OFERTADA NA PRAÇA
+Segunda - 08:50 - 10:30 - CR:FR (T1) - CIDA
+Terça - 08:50 - 10:30 - AC I (T1) - THELDO
+Quinta - 08:50 - 10:30 - AC I (T1) - THELDO
+Sexta - 08:50 - 10:30 - OFERTADA NA PRAÇA
+Segunda - 10:40 - 12:20 - LAB.AEDs II (T2/G1) - FELIPE
+Quarta - 10:40 - 12:20 - LAB.AEDs II (T2/G3) - PEDRO RAMOS
+Segunda - 07:00 - 08:40 - AEDs II (T2) - FELIPE
+Quarta - 07:00 - 08:40 - ES1 (T2) - LUCIANA
+Quinta - 07:00 - 08:40 - ES1 (T2) - LUCIANA
+Sexta - 07:00 - 08:40 - OFERTADA NA PRAÇA
+Segunda - 08:50 - 10:30 - CR:FR (T2) - CIDA
+Terça - 08:50 - 10:30 - AC I (T2) - CLÁUDIO
+Quinta - 08:50 - 10:30 - AC I (T2) - CLÁUDIO
+Sexta - 08:50 - 10:30 - OFERTADA NA PRAÇA
+Segunda - 10:40 - 12:20 - LAB.AEDs II (G1) - NAÍSSES
+Quarta - 10:40 - 12:20 - ES1 - AMALIA
+Quinta - 10:40 - 12:20 - ES1 - AMALIA
+Sexta - 10:40 - 12:20 - OFERTADA NA PRAÇA
+Segunda - 13:30 - 15:10 - AEDs II - NAÍSSES
+Quarta - 13:30 - 15:10 - AC I - THELDO
+Quinta - 13:30 - 15:10 - AC I - THELDO
+Sexta - 13:30 - 15:10 - OFERTADA NA PRAÇA
+Segunda - 15:20 - 17:00 - CR:FR (T3) - CIDA
+Sexta - 15:20 - 17:00 - OFERTADA NA PRAÇA
+Segunda - 17:10 - 18:50 - AEDs III - KUTOVA
+Quarta - 17:10 - 18:50 - LAC (G2) - ROMANELLI
+Quinta - 17:10 - 18:50 - LAC (G2) - ROMANELLI
+Sexta - 17:10 - 18:50 - OFERTADA NA PRAÇA
+Segunda - 13:30 - 15:10 - LP - M.RODRIGO
+Quarta - 13:30 - 15:10 - Cálculo II
+Quinta - 13:30 - 15:10 - Cálculo II
+Sexta - 13:30 - 15:10 - OFERTADA NA PRAÇA
+Segunda - 15:20 - 17:00 - BD - WLADIMIR
+Terça - 15:20 - 17:00 - BD - WLADIMIR
+Quinta - 15:20 - 17:00 - AC II - HENRIQUE
+Sexta - 15:20 - 17:00 - AC II - HENRIQUE
+Segunda - 17:10 - 18:50 - MAD - ZÁRATE
+Quarta - 17:10 - 18:50 - GRAFOS - SÍLVIO
+Quinta - 17:10 - 18:50 - GRAFOS - SÍLVIO
+Sexta - 17:10 - 18:50 - OFERTADA NA PRAÇA
+Segunda - 07:00 - 08:40 - LDDM (G1) - ILO
+Terça - 07:00 - 08:40 - IA - CRIS
+Quarta - 07:00 - 08:40 - CRIS / MOL / ROSI
+Quinta - 07:00 - 08:40 - CRIS / MOL / ROSI
+Sexta - 07:00 - 08:40 - OFERTADA NA PRAÇA
