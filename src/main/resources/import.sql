@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS horario_disciplina (
 
 CREATE TABLE IF NOT EXISTS aluno (
     id SERIAL PRIMARY KEY,
-    nome TEXT NOT NULL UNIQUE
+    nome TEXT NOT NULL UNIQUE,
     matricula TEXT NOT NULL UNIQUE
 );
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS aluno_disciplina (
     UNIQUE (aluno_id, disciplina_id)
 );
 
-INSERT INTO curso(nome) VALUES ('CIÊNCIA DA COMPUTAÇÃO')
+INSERT INTO curso(nome) VALUES ('CIÊNCIA DA COMPUTAÇÃO');
 
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('INTRODUÇÃO À COMPUTAÇÃO', 70);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('LABORATÓRIO DE INICIAÇÃO À PROGRAMAÇÃO', 50);
@@ -139,44 +139,190 @@ INSERT INTO disciplina (nome, carga_horaria) VALUES ('TÓPICOS EM COMPUTAÇÃO I
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TÓPICOS EM COMPUTAÇÃO IV', 40);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TRABALHO DE CONCLUSÃO DE CURSO II', 70);
 
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II', SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS I');
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES (SELECT id FROM disciplina WHERE nome='ENGENHARIA DE SOFTWARE I', SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II');
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR II: BACK-END'), (SELECT id FROM disciplina WHERE nome='ENGENHARIA DE SOFTWARE I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES II'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='BANCO DE DADOS'), (SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR II: BACK-END'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='CÁLCULO II'), (SELECT id FROM disciplina WHERE nome='CÁLCULO I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='LINGUAGENS DE PROGRAMAÇÃO'), (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR III: PESQUISA APLICADA'), (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='ESTATÍSTICA E PROBABILIDADE'), (SELECT id FROM disciplina WHERE nome='CÁLCULO I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='INTELIGÊNCIA ARTIFICIAL'), (SELECT id FROM disciplina WHERE nome='TEORIA DOS GRAFOS E COMPUTABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='LABORATÓRIO DE DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS'), (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='MODELAGEM E AVALIAÇÃO DE DESEMPENHO'), (SELECT id FROM disciplina WHERE nome='TEORIA DOS GRAFOS E COMPUTABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR IV: APLICAÇÕES MÓVEIS'), (SELECT id FROM disciplina WHERE nome='LABORATÓRIO DE DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES III'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='ENGENHARIA DE SOFTWARE II'), (SELECT id FROM disciplina WHERE nome='ENGENHARIA DE SOFTWARE I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'), (SELECT id FROM disciplina WHERE nome='TEORIA DOS GRAFOS E COMPUTABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'), (SELECT id FROM disciplina WHERE nome='ESTATÍSTICA E PROBABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES I'), (SELECT id FROM disciplina WHERE nome='TEORIA DOS GRAFOS E COMPUTABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='SISTEMAS OPERACIONAIS'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR V: SISTEMAS COMPUTACIONAIS'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES III'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='COMPUTAÇÃO DISTRIBUÍDA'), (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='COMPUTAÇÃO PARALELA'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES III'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='FUNDAMENTOS TEÓRICOS DA COMPUTAÇÃO'), (SELECT id FROM disciplina WHERE nome='TEORIA DOS GRAFOS E COMPUTABILIDADE'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='PROCESSAMENTO E ANÁLISE DE IMAGENS'), (SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR VI: SISTEMAS PARALELOS E DISTRIBUÍDOS'), (SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='COMPILADORES'), (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='COMPUTAÇÃO GRÁFICA'), (SELECT id FROM disciplina WHERE nome='GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES II'), (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES I'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO I'), (SELECT id FROM disciplina WHERE nome='FUNDAMENTOS DE PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO II'), (SELECT id FROM disciplina WHERE nome='FUNDAMENTOS DE PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO I'), (SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='CIBERSEGURANÇA E ETHICAL HACKING'), (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='OTIMIZAÇÃO DE SISTEMAS'), (SELECT id FROM disciplina WHERE nome='GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='SEGURANÇA E AUDITORIA DE SISTEMAS'), (SELECT id FROM disciplina WHERE nome='ENGENHARIA DE SOFTWARE II'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO III'), (SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO IV'), (SELECT id FROM disciplina WHERE nome='PROJETO E ANÁLISE DE ALGORITMOS'));
-INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) VALUES ((SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO II'), (SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO I'));
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) 
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id 
+FROM disciplina d1 
+JOIN disciplina d2 ON d1.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS II' AND d2.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS I';
 
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'ENGENHARIA DE SOFTWARE I' AND d2.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO INTERDISCIPLINAR II: BACK-END' AND d2.nome = 'ENGENHARIA DE SOFTWARE I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'ARQUITETURA DE COMPUTADORES II' AND d2.nome = 'ARQUITETURA DE COMPUTADORES I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'BANCO DE DADOS' AND d2.nome = 'TRABALHO INTERDISCIPLINAR II: BACK-END';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'CÁLCULO II' AND d2.nome = 'CÁLCULO I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'LINGUAGENS DE PROGRAMAÇÃO' AND d2.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO INTERDISCIPLINAR III: PESQUISA APLICADA' AND d2.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'ESTATÍSTICA E PROBABILIDADE' AND d2.nome = 'CÁLCULO I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'INTELIGÊNCIA ARTIFICIAL' AND d2.nome = 'TEORIA DOS GRAFOS E COMPUTABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'LABORATÓRIO DE DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS' AND d2.nome = 'ALGORITMOS E ESTRUTURAS DE DADOS II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'MODELAGEM E AVALIAÇÃO DE DESEMPENHO' AND d2.nome = 'TEORIA DOS GRAFOS E COMPUTABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO INTERDISCIPLINAR IV: APLICAÇÕES MÓVEIS' AND d2.nome = 'LABORATÓRIO DE DESENVOLVIMENTO PARA DISPOSITIVOS MÓVEIS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'ARQUITETURA DE COMPUTADORES III' AND d2.nome = 'ARQUITETURA DE COMPUTADORES II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'ENGENHARIA DE SOFTWARE II' AND d2.nome = 'ENGENHARIA DE SOFTWARE I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'PROJETO E ANÁLISE DE ALGORITMOS' AND d2.nome = 'TEORIA DOS GRAFOS E COMPUTABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'PROJETO E ANÁLISE DE ALGORITMOS' AND d2.nome = 'ESTATÍSTICA E PROBABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'REDES DE COMPUTADORES I' AND d2.nome = 'TEORIA DOS GRAFOS E COMPUTABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'SISTEMAS OPERACIONAIS' AND d2.nome = 'ARQUITETURA DE COMPUTADORES II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO INTERDISCIPLINAR V: SISTEMAS COMPUTACIONAIS' AND d2.nome = 'ARQUITETURA DE COMPUTADORES III';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'COMPUTAÇÃO DISTRIBUÍDA' AND d2.nome = 'REDES DE COMPUTADORES I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'COMPUTAÇÃO PARALELA' AND d2.nome = 'ARQUITETURA DE COMPUTADORES III';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'FUNDAMENTOS TEÓRICOS DA COMPUTAÇÃO' AND d2.nome = 'TEORIA DOS GRAFOS E COMPUTABILIDADE';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'PROCESSAMENTO E ANÁLISE DE IMAGENS' AND d2.nome = 'PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO INTERDISCIPLINAR VI: SISTEMAS PARALELOS E DISTRIBUÍDOS' AND d2.nome = 'PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'COMPILADORES' AND d2.nome = 'ARQUITETURA DE COMPUTADORES II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'COMPUTAÇÃO GRÁFICA' AND d2.nome = 'GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'REDES DE COMPUTADORES II' AND d2.nome = 'REDES DE COMPUTADORES I';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TÓPICOS EM COMPUTAÇÃO I' AND d2.nome = 'FUNDAMENTOS DE PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TÓPICOS EM COMPUTAÇÃO II' AND d2.nome = 'FUNDAMENTOS DE PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO DE CONCLUSÃO DE CURSO I' AND d2.nome = 'PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'CIBERSEGURANÇA E ETHICAL HACKING' AND d2.nome = 'REDES DE COMPUTADORES II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'OTIMIZAÇÃO DE SISTEMAS' AND d2.nome = 'GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'SEGURANÇA E AUDITORIA DE SISTEMAS' AND d2.nome = 'ENGENHARIA DE SOFTWARE II';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TÓPICOS EM COMPUTAÇÃO III' AND d2.nome = 'PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TÓPICOS EM COMPUTAÇÃO IV' AND d2.nome = 'PROJETO E ANÁLISE DE ALGORITMOS';
+
+INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id)  
+SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id
+FROM disciplina d1
+JOIN disciplina d2 ON d1.nome = 'TRABALHO DE CONCLUSÃO DE CURSO II' AND d2.nome = 'TRABALHO DE CONCLUSÃO DE CURSO I';
 
 INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 1);
 INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 2);
@@ -277,7 +423,7 @@ INSERT INTO dia (nome) VALUES ('');
 INSERT INTO horario (inicio, fim) VALUES ('07:00', '08:40');
 INSERT INTO horario (inicio, fim) VALUES ('08:50', '10:30');
 INSERT INTO horario (inicio, fim) VALUES ('10:40', '12:20');
-INSERT INTO horario (inicio, fim) VALUES ('', '');
+INSERT INTO horario (inicio, fim) VALUES ('00:00', '00:00');
 
 -- horario_disciplina_queries
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='INTRODUÇÃO À COMPUTAÇÃO'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='terca'));
@@ -327,13 +473,13 @@ INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VAL
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS I'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='CÁLCULO I'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='terca'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='CÁLCULO I'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='quarta'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='DESENVOLVIMENTO DE INTERFACES WEB'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='DESENVOLVIMENTO DE INTERFACES WEB'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='FILOSOFIA: RAZÃO E MODERNIDADE'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='sexta'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS II'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES I'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='terca'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES I'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='quinta'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA I'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA I'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TRABALHO INTERDISCIPLINAR II: BACK-END'), (SELECT id FROM horario WHERE inicio='10:40' AND fim='12:20'), (SELECT id FROM dia WHERE nome='quarta'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS III'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ALGORITMOS E ESTRUTURAS DE DADOS III'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='quarta'));
@@ -341,10 +487,10 @@ INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VAL
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='CÁLCULO II'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='CÁLCULO II'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='terca'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ESTATÍSTICA E PROBABILIDADE'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='terca'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA II'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA II'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES III'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='ARQUITETURA DE COMPUTADORES III'), (SELECT id FROM horario WHERE inicio='10:40' AND fim='12:20'), (SELECT id FROM dia WHERE nome='segunda'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA III'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA III'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES I'), (SELECT id FROM horario WHERE inicio='10:40' AND fim='12:20'), (SELECT id FROM dia WHERE nome='segunda'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES I'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='sexta'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='COMPUTAÇÃO DISTRIBUÍDA'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='terca'));
@@ -356,11 +502,11 @@ INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VAL
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='FILOSOFIA: ANTROPOLOGIA E ÉTICA'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='terca'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='FILOSOFIA: ANTROPOLOGIA E ÉTICA'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='quinta'));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='REDES DE COMPUTADORES II'), (SELECT id FROM horario WHERE inicio='07:00' AND fim='08:40'), (SELECT id FROM dia WHERE nome='quarta'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO I'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO II'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO I'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO I'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=  ''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO II'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO I'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='CIBERSEGURANÇA E ETHICAL HACKING'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='quinta'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA IV'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO III'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='OPTATIVA IV'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO III'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TÓPICOS EM COMPUTAÇÃO IV'), (SELECT id FROM horario WHERE inicio='08:50' AND fim='10:30'), (SELECT id FROM dia WHERE nome='terca'));
-INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO II'), (SELECT id FROM horario WHERE inicio='' AND fim=''), (SELECT id FROM dia WHERE nome=''));
+INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, (SELECT id FROM disciplina WHERE nome='TRABALHO DE CONCLUSÃO DE CURSO II'), (SELECT id FROM horario WHERE inicio='00:00' AND fim='00:00'), (SELECT id FROM dia WHERE nome=''));
