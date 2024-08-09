@@ -1,33 +1,39 @@
 package org.vgbs;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 @Entity
 @Table(name = "horario_disciplina", uniqueConstraints = @UniqueConstraint(columnNames = {"curso_id", "disciplina_id", "horario_id", "dia_id"}))
 public class HorarioDisciplina extends PanacheEntityBase{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @EmbeddedId
+    private HorarioDisciplinaId id;
+    
+    @MapsId("cursoId")
     @ManyToOne
     @JoinColumn(name="curso_id", nullable = false)
     public Curso cursoId;
 
+    @MapsId("disciplinaId")
     @ManyToOne
     @JoinColumn(name="disciplina_id", nullable = false)
     public Disciplina disciplinaId;
 
+    @MapsId("horarioId")
     @ManyToOne
     @JoinColumn(name="horario_id", nullable = false)
     public Horario horarioId;
 
+    @MapsId("diaId")
     @ManyToOne
     @JoinColumn(name="dia_id", nullable = false)
     public Dia diaId;

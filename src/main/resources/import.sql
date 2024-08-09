@@ -1,7 +1,5 @@
 INSERT INTO curso(nome) VALUES ('CIÊNCIA DA COMPUTAÇÃO');
 
-
-
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('INTRODUÇÃO À COMPUTAÇÃO', 70);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('LABORATÓRIO DE INICIAÇÃO À PROGRAMAÇÃO', 50);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TRABALHO INTERDISCIPLINAR I: FRONT-END', 45);

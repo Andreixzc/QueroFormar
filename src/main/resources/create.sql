@@ -45,16 +45,15 @@ CREATE TABLE IF NOT EXISTS horario (
 );
 
 CREATE TABLE IF NOT EXISTS horario_disciplina (
-    id SERIAL PRIMARY KEY,
     curso_id INTEGER NOT NULL,
     disciplina_id INTEGER NOT NULL,
     horario_id INTEGER NOT NULL,
     dia_id INTEGER NOT NULL,
+    PRIMARY KEY (curso_id, disciplina_id, horario_id, dia_id),
     FOREIGN KEY (curso_id) REFERENCES curso(id),
     FOREIGN KEY (disciplina_id) REFERENCES disciplina(id),
     FOREIGN KEY (horario_id) REFERENCES horario(id),
     FOREIGN KEY (dia_id) REFERENCES dia(id),
-    UNIQUE (curso_id, disciplina_id, horario_id, dia_id)
 );
 
 CREATE TABLE IF NOT EXISTS aluno (
