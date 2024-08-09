@@ -16,9 +16,6 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         List<HorarioDisciplina> hd = HorarioDisciplina.listAll();
-        for (var t : hd) {
-            System.out.println("teste: " + t);
-        }
         return "Hello from Quarkus RESTs";
     }
 }
