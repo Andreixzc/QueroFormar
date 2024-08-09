@@ -1,6 +1,5 @@
-package org.vgbs;
+package org.vgbs.entity;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;

@@ -1,4 +1,4 @@
-package org.vgbs;
+package org.vgbs.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;
@@ -7,21 +7,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.transaction.Transactional;
-
 
 @Entity
-@Table(name="disciplina")
-public class Disciplina extends PanacheEntityBase{
+@Table(name="curso")
+public class Curso extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
     @Column(name="nome")
     public String nome;
-    
-    @Column(name="carga_horaria")
-    public int cargaHoraria;
 
     public Long getId() {
         return id;
@@ -38,13 +33,4 @@ public class Disciplina extends PanacheEntityBase{
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public int getCargaHoraria() {
-        return cargaHoraria;
-    }
-
-    public void setCargaHoraria(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
-    }
-
 }

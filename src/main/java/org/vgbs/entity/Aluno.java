@@ -1,4 +1,4 @@
-package org.vgbs;
+package org.vgbs.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;

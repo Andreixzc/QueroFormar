@@ -1,7 +1,6 @@
-package org.vgbs;
+package org.vgbs.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,19 +11,19 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name="prerequisito")
-public class Prerequisito extends PanacheEntityBase{
+@Table(name="curso_disciplina")
+public class CursoDisciplina extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
     @ManyToOne
+    @JoinColumn(name="curso_id", nullable = false)
+    public Curso cursoId;
+    
+    @ManyToOne
     @JoinColumn(name="disciplina_id", nullable = false)
     public Disciplina disciplinaId;
-
-    @ManyToOne
-    @JoinColumn(name="disciplina_requisito_id", nullable = false)
-    public Disciplina disciplinaRequisitoId;
 
     public Long getId() {
         return id;
@@ -34,6 +33,14 @@ public class Prerequisito extends PanacheEntityBase{
         this.id = id;
     }
 
+    public Curso getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Curso cursoId) {
+        this.cursoId = cursoId;
+    }
+
     public Disciplina getDisciplinaId() {
         return disciplinaId;
     }
@@ -41,13 +48,4 @@ public class Prerequisito extends PanacheEntityBase{
     public void setDisciplinaId(Disciplina disciplinaId) {
         this.disciplinaId = disciplinaId;
     }
-
-    public Disciplina getDisciplinaRequisitoId() {
-        return disciplinaRequisitoId;
-    }
-
-    public void setDisciplinaRequisitoId(Disciplina disciplinaRequisitoId) {
-        this.disciplinaRequisitoId = disciplinaRequisitoId;
-    }
-
 }

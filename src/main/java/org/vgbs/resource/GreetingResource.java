@@ -1,6 +1,8 @@
-package org.vgbs;
+package org.vgbs.resource;
 
 import java.util.List;
+
+import org.vgbs.entity.HorarioDisciplina;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -17,8 +19,6 @@ public class GreetingResource {
         for (var t : hd) {
             System.out.println("teste: " + t);
         }
-        System.out.println("ooo aaa ");
-
         return "Hello from Quarkus RESTs";
     }
 }

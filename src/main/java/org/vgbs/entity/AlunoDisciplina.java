@@ -1,7 +1,6 @@
-package org.vgbs;
+package org.vgbs.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +11,8 @@ import jakarta.persistence.Table;
 
 
 @Entity
-@Table(name="aluno_curso")
-public class AlunoCurso extends PanacheEntityBase{
+@Table(name="aluno_disciplina")
+public class AlunoDisciplina extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
@@ -23,8 +22,8 @@ public class AlunoCurso extends PanacheEntityBase{
     public Aluno alunoId;
 
     @ManyToOne
-    @JoinColumn(name = "curso_id", nullable = false)
-    public Curso cursoId;
+    @JoinColumn(name = "disciplina_id", nullable = false)
+    public Disciplina disciplinaId;
 
     public Long getId() {
         return id;
@@ -42,12 +41,11 @@ public class AlunoCurso extends PanacheEntityBase{
         this.alunoId = alunoId;
     }
 
-    public Curso getCursoId() {
-        return cursoId;
+    public Disciplina getDisciplinaId() {
+        return disciplinaId;
     }
 
-    public void setCursoId(Curso cursoId) {
-        this.cursoId = cursoId;
+    public void setDisciplinaId(Disciplina disciplinaId) {
+        this.disciplinaId = disciplinaId;
     }
-
 }
