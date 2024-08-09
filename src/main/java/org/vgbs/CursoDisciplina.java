@@ -1,6 +1,7 @@
 package org.vgbs;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,7 +17,9 @@ public class CursoDisciplina extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    public Long curso_id;
+    @Column(name="curso_id")
+    public Long cursoId;
     
-    public Long disciplina_id;
+    @Column(name="disciplina_id")
+    public Long disciplinaId;
 }

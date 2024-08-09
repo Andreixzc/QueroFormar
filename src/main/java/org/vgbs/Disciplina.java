@@ -1,6 +1,7 @@
 package org.vgbs;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,15 +17,10 @@ public class Disciplina extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
+    @Column(name="nome")
     public String nome;
     
-    public int carga_horaria;
+    @Column(name="carga_horaria")
+    public int cargaHoraria;
 
-    @Transactional
-    public static void createDisciplina(){
-        Disciplina d = new Disciplina();
-        d.nome = "TESTE2";
-        d.carga_horaria = 80;
-        d.persist();
-    }
 }

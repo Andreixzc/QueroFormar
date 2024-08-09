@@ -1,6 +1,7 @@
 package org.vgbs;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,8 +15,10 @@ public class Aluno extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
-
+    
+    @Column(name="nome")
     public String nome;
-
+    
+    @Column(name="matricula")
     public String matricula;
 }

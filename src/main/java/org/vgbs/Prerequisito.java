@@ -1,6 +1,7 @@
 package org.vgbs;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +16,10 @@ public class Prerequisito extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    public Long disciplina_id;
+    @Column(name="disciplina_id")
+    public Long disciplinaId;
 
-    public Long disciplina_requisito_id;
+    @Column(name="disciplina_requisito_id")
+    public Long disciplinaRequisitoId;
 
 }
