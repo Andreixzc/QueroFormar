@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.transaction.Transactional;
 
@@ -17,9 +19,35 @@ public class CursoDisciplina extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(name="curso_id")
-    public Long cursoId;
+    @ManyToOne
+    @JoinColumn(name="curso_id", nullable = false)
+    public Curso cursoId;
     
-    @Column(name="disciplina_id")
-    public Long disciplinaId;
+    @ManyToOne
+    @JoinColumn(name="disciplina_id", nullable = false)
+    public Disciplina disciplinaId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Curso getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Curso cursoId) {
+        this.cursoId = cursoId;
+    }
+
+    public Disciplina getDisciplinaId() {
+        return disciplinaId;
+    }
+
+    public void setDisciplinaId(Disciplina disciplinaId) {
+        this.disciplinaId = disciplinaId;
+    }
 }

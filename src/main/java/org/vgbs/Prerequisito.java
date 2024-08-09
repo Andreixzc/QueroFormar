@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 
@@ -16,10 +18,36 @@ public class Prerequisito extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(name="disciplina_id")
-    public Long disciplinaId;
+    @ManyToOne
+    @JoinColumn(name="disciplina_id", nullable = false)
+    public Disciplina disciplinaId;
 
-    @Column(name="disciplina_requisito_id")
-    public Long disciplinaRequisitoId;
+    @ManyToOne
+    @JoinColumn(name="disciplina_requisito_id", nullable = false)
+    public Disciplina disciplinaRequisitoId;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Disciplina getDisciplinaId() {
+        return disciplinaId;
+    }
+
+    public void setDisciplinaId(Disciplina disciplinaId) {
+        this.disciplinaId = disciplinaId;
+    }
+
+    public Disciplina getDisciplinaRequisitoId() {
+        return disciplinaRequisitoId;
+    }
+
+    public void setDisciplinaRequisitoId(Disciplina disciplinaRequisitoId) {
+        this.disciplinaRequisitoId = disciplinaRequisitoId;
+    }
 
 }

@@ -1,105 +1,5 @@
 INSERT INTO curso(nome) VALUES ('CIÊNCIA DA COMPUTAÇÃO');
 
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 1);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 2);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 3);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 4);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 5);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 6);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 7);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 8);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 9);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 10);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 11);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 12);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 13);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 14);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 15);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 16);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 17);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 18);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 19);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 20);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 21);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 22);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 23);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 24);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 25);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 26);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 27);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 28);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 29);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 30);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 31);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 32);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 33);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 34);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 35);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 36);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 37);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 38);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 39);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 40);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 41);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 42);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 43);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 44);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 45);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 46);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 47);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 48);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 49);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 50);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 51);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 52);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 53);
-INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 54);
-
-
--- corpo_docente_queries
-INSERT INTO corpo_docente (nome) VALUES ('Carlos Alberto Marques Pietrobon');
-INSERT INTO corpo_docente (nome) VALUES ('Felipe Domingos da Cunha');
-INSERT INTO corpo_docente (nome) VALUES ('Ilo Amy Saldanha Rivero');
-INSERT INTO corpo_docente (nome) VALUES ('Amália Soares Vieira de Vasconcelos');
-INSERT INTO corpo_docente (nome) VALUES ('Pedro Henrique Ramos Costa');
-INSERT INTO corpo_docente (nome) VALUES ('João Carlos Oliveira Caetano');
-INSERT INTO corpo_docente (nome) VALUES ('Luciana Mara Freitas Diniz');
-INSERT INTO corpo_docente (nome) VALUES ('Rommel Vieira Carneiro');
-INSERT INTO corpo_docente (nome) VALUES ('Arnon de Miranda Gomes');
-INSERT INTO corpo_docente (nome) VALUES ('Wladmir Cardoso Brandao');
-INSERT INTO corpo_docente (nome) VALUES ('Marco Rodrigo Costa');
-INSERT INTO corpo_docente (nome) VALUES ('Felipe de Castro Belém');
-INSERT INTO corpo_docente (nome) VALUES ('Hayala Nepomuceno Curto');
-INSERT INTO corpo_docente (nome) VALUES ('Leonardo Vilela Cardoso');
-INSERT INTO corpo_docente (nome) VALUES ('Maury Meirelles Gouvea Junior');
-INSERT INTO corpo_docente (nome) VALUES ('Professor(es) a definir');
-INSERT INTO corpo_docente (nome) VALUES ('Marcos Roberto do Nascimento');
-INSERT INTO corpo_docente (nome) VALUES ('Theldo Cruz Franqueira');
-INSERT INTO corpo_docente (nome) VALUES ('Walisson Ferreira de Carvalho');
-INSERT INTO corpo_docente (nome) VALUES ('Carina Pinheiro Soares de Torres Alves Mendes');
-INSERT INTO corpo_docente (nome) VALUES ('Revero Campos da Silva');
-INSERT INTO corpo_docente (nome) VALUES ('Jose Claudio do Nascimento Henriques');
-INSERT INTO corpo_docente (nome) VALUES ('Thiago Augusto da Costa Silva Lopes');
-INSERT INTO corpo_docente (nome) VALUES ('Thiago Teixeira Santos');
-INSERT INTO corpo_docente (nome) VALUES ('Max do Val Machado');
-INSERT INTO corpo_docente (nome) VALUES ('Romanelli Lodron Zuim');
-INSERT INTO corpo_docente (nome) VALUES ('Flaviana Santos Dutra');
-INSERT INTO corpo_docente (nome) VALUES ('Roney Rachide Nunes');
-INSERT INTO corpo_docente (nome) VALUES ('Maria Dulce Reis');
-
--- dia_queries
-INSERT INTO dia (nome) VALUES ('segunda');
-INSERT INTO dia (nome) VALUES ('terca');
-INSERT INTO dia (nome) VALUES ('quarta');
-INSERT INTO dia (nome) VALUES ('quinta');
-INSERT INTO dia (nome) VALUES ('sexta');
-INSERT INTO dia (nome) VALUES ('');
-
--- horario_queries
-INSERT INTO horario (inicio, fim) VALUES ('07:00', '08:40');
-INSERT INTO horario (inicio, fim) VALUES ('08:50', '10:30');
-INSERT INTO horario (inicio, fim) VALUES ('10:40', '12:20');
-INSERT INTO horario (inicio, fim) VALUES ('00:00', '00:00');
 
 
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('INTRODUÇÃO À COMPUTAÇÃO', 70);
@@ -157,6 +57,109 @@ INSERT INTO disciplina (nome, carga_horaria) VALUES ('OPTATIVA IV', 80);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TÓPICOS EM COMPUTAÇÃO III', 40);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TÓPICOS EM COMPUTAÇÃO IV', 40);
 INSERT INTO disciplina (nome, carga_horaria) VALUES ('TRABALHO DE CONCLUSÃO DE CURSO II', 70);
+
+
+-- corpo_docente_queries
+INSERT INTO corpo_docente (nome) VALUES ('Carlos Alberto Marques Pietrobon');
+INSERT INTO corpo_docente (nome) VALUES ('Felipe Domingos da Cunha');
+INSERT INTO corpo_docente (nome) VALUES ('Ilo Amy Saldanha Rivero');
+INSERT INTO corpo_docente (nome) VALUES ('Amália Soares Vieira de Vasconcelos');
+INSERT INTO corpo_docente (nome) VALUES ('Pedro Henrique Ramos Costa');
+INSERT INTO corpo_docente (nome) VALUES ('João Carlos Oliveira Caetano');
+INSERT INTO corpo_docente (nome) VALUES ('Luciana Mara Freitas Diniz');
+INSERT INTO corpo_docente (nome) VALUES ('Rommel Vieira Carneiro');
+INSERT INTO corpo_docente (nome) VALUES ('Arnon de Miranda Gomes');
+INSERT INTO corpo_docente (nome) VALUES ('Wladmir Cardoso Brandao');
+INSERT INTO corpo_docente (nome) VALUES ('Marco Rodrigo Costa');
+INSERT INTO corpo_docente (nome) VALUES ('Felipe de Castro Belém');
+INSERT INTO corpo_docente (nome) VALUES ('Hayala Nepomuceno Curto');
+INSERT INTO corpo_docente (nome) VALUES ('Leonardo Vilela Cardoso');
+INSERT INTO corpo_docente (nome) VALUES ('Maury Meirelles Gouvea Junior');
+INSERT INTO corpo_docente (nome) VALUES ('Professor(es) a definir');
+INSERT INTO corpo_docente (nome) VALUES ('Marcos Roberto do Nascimento');
+INSERT INTO corpo_docente (nome) VALUES ('Theldo Cruz Franqueira');
+INSERT INTO corpo_docente (nome) VALUES ('Walisson Ferreira de Carvalho');
+INSERT INTO corpo_docente (nome) VALUES ('Carina Pinheiro Soares de Torres Alves Mendes');
+INSERT INTO corpo_docente (nome) VALUES ('Revero Campos da Silva');
+INSERT INTO corpo_docente (nome) VALUES ('Jose Claudio do Nascimento Henriques');
+INSERT INTO corpo_docente (nome) VALUES ('Thiago Augusto da Costa Silva Lopes');
+INSERT INTO corpo_docente (nome) VALUES ('Thiago Teixeira Santos');
+INSERT INTO corpo_docente (nome) VALUES ('Max do Val Machado');
+INSERT INTO corpo_docente (nome) VALUES ('Romanelli Lodron Zuim');
+INSERT INTO corpo_docente (nome) VALUES ('Flaviana Santos Dutra');
+INSERT INTO corpo_docente (nome) VALUES ('Roney Rachide Nunes');
+INSERT INTO corpo_docente (nome) VALUES ('Maria Dulce Reis');
+
+-- dia_queries
+INSERT INTO dia (nome) VALUES ('segunda');
+INSERT INTO dia (nome) VALUES ('terca');
+INSERT INTO dia (nome) VALUES ('quarta');
+INSERT INTO dia (nome) VALUES ('quinta');
+INSERT INTO dia (nome) VALUES ('sexta');
+INSERT INTO dia (nome) VALUES ('');
+
+-- horario_queries
+INSERT INTO horario (inicio, fim) VALUES ('07:00', '08:40');
+INSERT INTO horario (inicio, fim) VALUES ('08:50', '10:30');
+INSERT INTO horario (inicio, fim) VALUES ('10:40', '12:20');
+INSERT INTO horario (inicio, fim) VALUES ('00:00', '00:00');
+
+
+
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 1);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 2);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 3);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 4);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 5);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 6);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 7);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 8);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 9);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 10);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 11);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 12);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 13);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 14);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 15);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 16);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 17);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 18);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 19);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 20);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 21);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 22);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 23);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 24);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 25);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 26);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 27);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 28);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 29);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 30);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 31);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 32);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 33);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 34);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 35);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 36);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 37);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 38);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 39);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 40);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 41);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 42);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 43);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 44);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 45);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 46);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 47);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 48);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 49);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 50);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 51);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 52);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 53);
+INSERT INTO curso_disciplina (curso_id, disciplina_id) VALUES (1, 54);
 
 INSERT INTO prerequisito(disciplina_id, disciplina_requisito_id) 
 SELECT d1.id AS disciplina_id, d2.id AS disciplina_requisito_id 
