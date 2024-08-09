@@ -13,11 +13,12 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        //Curso.createCurso();
         List<HorarioDisciplina> hd = HorarioDisciplina.listAll();
         for (var t : hd) {
             System.out.println("teste: " + t);
         }
-        return "Hello from Quarkus RESTsa";
+        System.out.println("ooo aaa ");
+
+        return "Hello from Quarkus RESTs";
     }
 }
