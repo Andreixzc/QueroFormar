@@ -15,55 +15,55 @@ public class HorarioDisciplina extends PanacheEntityBase{
     @EmbeddedId
     private HorarioDisciplinaId id;
     
-    @MapsId("cursoId")
+    @MapsId("curso")
     @ManyToOne
     @JoinColumn(name="curso_id", nullable = false)
-    public Curso cursoId;
+    public Curso curso;
 
-    @MapsId("disciplinaId")
+    @MapsId("disciplina")
     @ManyToOne
     @JoinColumn(name="disciplina_id", nullable = false)
-    public Disciplina disciplinaId;
+    public Disciplina disciplina;
 
-    @MapsId("horarioId")
+    @MapsId("horario")
     @ManyToOne
     @JoinColumn(name="horario_id", nullable = false)
-    public Horario horarioId;
+    public Horario horario;
 
-    @MapsId("diaId")
+    @MapsId("dia")
     @ManyToOne
     @JoinColumn(name="dia_id", nullable = false)
-    public Dia diaId;
+    public Dia dia;
 
-    public Curso getCursoId() {
-        return cursoId;
+    public Curso getCurso() {
+        return curso;
     }
 
-    public void setCursoId(Curso cursoId) {
-        this.cursoId = cursoId;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 
-    public Disciplina getDisciplinaId() {
-        return disciplinaId;
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
-    public void setDisciplinaId(Disciplina disciplinaId) {
-        this.disciplinaId = disciplinaId;
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
     }
 
-    public Horario getHorarioId() {
-        return horarioId;
+    public Horario getHorario() {
+        return horario;
     }
 
-    public void setHorarioId(Horario horarioId) {
-        this.horarioId = horarioId;
+    public void setHorario(Horario horario) {
+        this.horario = horario;
     }
 
-    public Dia getDiaId() {
-        return diaId;
+    public Dia getDia() {
+        return dia;
     }
 
-    public void setDiaId(Dia diaId) {
-        this.diaId = diaId;
+    public void setDia(Dia dia) {
+        this.dia = dia;
     }
 }

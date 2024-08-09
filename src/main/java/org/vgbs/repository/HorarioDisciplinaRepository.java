@@ -14,6 +14,6 @@ public class HorarioDisciplinaRepository implements PanacheRepository<HorarioDis
     public List<HorarioDisciplina> findByCurso(Long id){
         Curso curso = new Curso();
         curso.setId(id);
-        return HorarioDisciplina.find("cursoId", curso).list();
+        return HorarioDisciplina.find("curso", curso).list();
     }
 }

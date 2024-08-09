@@ -13,6 +13,6 @@ public class AlunoDisciplinaRepository implements PanacheRepository<AlunoDiscipl
     public List<AlunoDisciplina>  findByCurso(Long alunoId){
         Aluno aluno = new Aluno();
         aluno.setId(alunoId);
-        return AlunoDisciplina.find("alunoId", aluno).list();
+        return AlunoDisciplina.find("aluno", aluno).list();
     }
 }

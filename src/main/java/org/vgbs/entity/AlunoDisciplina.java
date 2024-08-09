@@ -19,11 +19,11 @@ public class AlunoDisciplina extends PanacheEntityBase{
 
     @ManyToOne
     @JoinColumn(name = "aluno_id", nullable = false)
-    public Aluno alunoId;
+    public Aluno aluno;
 
     @ManyToOne
     @JoinColumn(name = "disciplina_id", nullable = false)
-    public Disciplina disciplinaId;
+    public Disciplina disciplina;
 
     public Long getId() {
         return id;
@@ -33,19 +33,19 @@ public class AlunoDisciplina extends PanacheEntityBase{
         this.id = id;
     }
 
-    public Aluno getAlunoId() {
-        return alunoId;
+    public Aluno getAluno() {
+        return aluno;
     }
 
-    public void setAlunoId(Aluno alunoId) {
-        this.alunoId = alunoId;
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 
-    public Disciplina getDisciplinaId() {
-        return disciplinaId;
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
-    public void setDisciplinaId(Disciplina disciplinaId) {
-        this.disciplinaId = disciplinaId;
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
     }
 }
