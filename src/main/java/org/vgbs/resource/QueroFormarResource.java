@@ -20,10 +20,6 @@ public class QueroFormarResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        List<HorarioDisciplina> hd = HorarioDisciplina.listAll();
-         for (var t : hd) {
-            System.out.println("teste: " + t);
-        }
         queroFormarServ.foo();
         return "Hello from Quarkus REST";
     }

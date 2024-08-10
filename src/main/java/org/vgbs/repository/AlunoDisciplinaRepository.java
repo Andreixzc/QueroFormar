@@ -10,9 +10,12 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class AlunoDisciplinaRepository implements PanacheRepository<AlunoDisciplina>{
-    public List<AlunoDisciplina>  findByCurso(Long alunoId){
+    public List<AlunoDisciplina>  findByMatricula(Long matricula){
         Aluno aluno = new Aluno();
-        aluno.setId(alunoId);
-        return AlunoDisciplina.find("aluno", aluno).list();
+        aluno.setId(matricula);
+        AlunoDisciplina alunoDisciplina = new AlunoDisciplina();
+        alunoDisciplina.setAluno(aluno);
+        //List<AlunoDisciplina> lista = AlunoDisciplina.findAll();
+        return AlunoDisciplina.listAll();
     }
 }

@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 
 
@@ -20,7 +21,7 @@ public class AlunoDisciplina extends PanacheEntityBase{
     @ManyToOne
     @JoinColumn(name = "aluno_id", nullable = false)
     public Aluno aluno;
-
+    
     @ManyToOne
     @JoinColumn(name = "disciplina_id", nullable = false)
     public Disciplina disciplina;
