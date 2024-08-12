@@ -2,69 +2,83 @@ package org.vgbs.dto;
 
 import java.time.LocalTime;
 
+import jakarta.persistence.Column;
+
+
 public class DisciplinaRestanteDTO {
-    private Long disciplina_id;
-    private String disciplina_nome;
-    private Long disciplina_requisito_id;
-    private String requisito_nome;
+    @Column(name = "disciplina_id")
+    private Long disciplinaId;
+
+    @Column(name = "disciplina_nome")
+    private String disciplinaNome;
+
+    @Column(name = "disciplina_requisito_id")
+    private Long disciplinaRequisitoId;
+
+    @Column(name = "requisito_nome")
+    private String requisitoNome;
+
+    @Column(name = "inicio")
     private LocalTime inicio;
+
+    @Column(name = "fim")
     private LocalTime fim;
     
-    public DisciplinaRestanteDTO(Long disciplinaId, String disciplina_nome, Long disciplina_requisito_id,
-            String requisito_nome, LocalTime inicio, LocalTime fim) {
-        this.disciplina_id = disciplinaId;
-        this.disciplina_nome = disciplina_nome;
-        this.disciplina_requisito_id = disciplina_requisito_id;
-        this.requisito_nome = requisito_nome;
+    public DisciplinaRestanteDTO(Long disciplinaId, String disciplinaNome, Long disciplinaRequisitoId,
+            String requisitoNome, LocalTime inicio, LocalTime fim) {
+        this.disciplinaId = disciplinaId;
+        this.disciplinaNome = disciplinaNome;
+        this.disciplinaRequisitoId = disciplinaRequisitoId;
+        this.requisitoNome = requisitoNome;
         this.inicio = inicio;
         this.fim = fim;
     }
 
     public Long getDisciplinaId() {
-        return disciplina_id;
+        return disciplinaId;
     }
 
     public void setDisciplinaId(Long disciplinaId) {
-        this.disciplina_id = disciplinaId;
+        this.disciplinaId = disciplinaId;
     }
 
-    public String getdisciplina_nome() {
-        return disciplina_nome;
+    public String getDisciplinaNome() {
+        return disciplinaNome;
     }
 
-    public void setdisciplina_nome(String disciplina_nome) {
-        this.disciplina_nome = disciplina_nome;
+    public void setDisciplinaNome(String disciplinaNome) {
+        this.disciplinaNome = disciplinaNome;
     }
 
-    public Long getdisciplina_requisito_id() {
-        return disciplina_requisito_id;
+    public Long getDisciplinaRequisitoId() {
+        return disciplinaRequisitoId;
     }
 
-    public void setdisciplina_requisito_id(Long disciplina_requisito_id) {
-        this.disciplina_requisito_id = disciplina_requisito_id;
+    public void setDisciplinaRequisitoId(Long disciplinaRequisitoId) {
+        this.disciplinaRequisitoId = disciplinaRequisitoId;
     }
 
-    public String getrequisito_nome() {
-        return requisito_nome;
+    public String getRequisitoNome() {
+        return requisitoNome;
     }
 
-    public void setrequisito_nome(String requisito_nome) {
-        this.requisito_nome = requisito_nome;
+    public void setRequisitoNome(String requisitoNome) {
+        this.requisitoNome = requisitoNome;
     }
 
-    public LocalTime getinicio() {
+    public LocalTime getInicio() {
         return inicio;
     }
 
-    public void setinicio(LocalTime inicio) {
+    public void setInicio(LocalTime inicio) {
         this.inicio = inicio;
     }
 
-    public LocalTime getfim() {
+    public LocalTime getFim() {
         return fim;
     }
 
-    public void setfim(LocalTime fim) {
+    public void setFim(LocalTime fim) {
         this.fim = fim;
     }
 

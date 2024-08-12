@@ -35,7 +35,7 @@ public class QueroFormarRepository {
             LEFT JOIN horario_disciplina ON horario_disciplina.disciplina_id = md.disciplina_id
             LEFT JOIN horario ON horario_disciplina.horario_id = horario.id;
                 """;
-        return em.createNativeQuery(query, "MissingDisciplinasMapping")
+        return em.createNativeQuery(query, "DisciplinasRestantesMapeamento")
                 .setParameter("alunoId", alunoId)
                 .getResultList();
     }

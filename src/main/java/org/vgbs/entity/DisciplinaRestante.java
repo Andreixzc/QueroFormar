@@ -12,7 +12,7 @@ import jakarta.persistence.ConstructorResult;
 
 @Entity
 @SqlResultSetMapping(
-        name = "MissingDisciplinasMapping",
+        name = "DisciplinasRestantesMapeamento",
         classes = @ConstructorResult(
                 targetClass = DisciplinaRestanteDTO.class,
                 columns = {
