@@ -19,11 +19,11 @@ public class Prerequisito extends PanacheEntityBase{
 
     @ManyToOne
     @JoinColumn(name="disciplina_id", nullable = false)
-    public Disciplina disciplinaId;
+    public Disciplina disciplina;
 
     @ManyToOne
     @JoinColumn(name="disciplina_requisito_id", nullable = false)
-    public Disciplina disciplinaRequisitoId;
+    public Disciplina disciplinaRequisito;
 
     public Long getId() {
         return id;
@@ -33,20 +33,20 @@ public class Prerequisito extends PanacheEntityBase{
         this.id = id;
     }
 
-    public Disciplina getDisciplinaId() {
-        return disciplinaId;
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 
-    public void setDisciplinaId(Disciplina disciplinaId) {
-        this.disciplinaId = disciplinaId;
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
     }
 
-    public Disciplina getDisciplinaRequisitoId() {
-        return disciplinaRequisitoId;
+    public Disciplina getDisciplinaRequisito() {
+        return disciplinaRequisito;
     }
 
-    public void setDisciplinaRequisitoId(Disciplina disciplinaRequisitoId) {
-        this.disciplinaRequisitoId = disciplinaRequisitoId;
+    public void setDisciplinaRequisito(Disciplina disciplinaRequisito) {
+        this.disciplinaRequisito = disciplinaRequisito;
     }
 
 }

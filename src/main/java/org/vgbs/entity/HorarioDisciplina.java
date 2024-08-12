@@ -15,33 +15,25 @@ public class HorarioDisciplina extends PanacheEntityBase{
     @EmbeddedId
     private HorarioDisciplinaId id;
     
-    @MapsId("cursoId")
+    @MapsId("curso")
     @ManyToOne
     @JoinColumn(name="curso_id", nullable = false)
     public Curso curso;
 
-    @MapsId("disciplinaId")
+    @MapsId("disciplina")
     @ManyToOne
     @JoinColumn(name="disciplina_id", nullable = false)
     public Disciplina disciplina;
 
-    @MapsId("horarioId")
+    @MapsId("horario")
     @ManyToOne
     @JoinColumn(name="horario_id", nullable = false)
     public Horario horario;
 
-    @MapsId("diaId")
+    @MapsId("dia")
     @ManyToOne
     @JoinColumn(name="dia_id", nullable = false)
     public Dia dia;
-
-    public HorarioDisciplinaId getId() {
-        return id;
-    }
-
-    public void setId(HorarioDisciplinaId id) {
-        this.id = id;
-    }
 
     public Curso getCurso() {
         return curso;

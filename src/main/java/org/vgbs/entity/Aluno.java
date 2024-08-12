@@ -16,10 +16,10 @@ public class Aluno extends PanacheEntityBase{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     
-    @Column(name="nome")
+    @Column(name="nome", nullable = false)
     public String nome;
     
-    @Column(name="matricula")
+    @Column(name="matricula", nullable = false)
     public String matricula;
 
     public Long getId() {

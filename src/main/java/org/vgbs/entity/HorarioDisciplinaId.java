@@ -10,49 +10,49 @@ import jakarta.persistence.Embeddable;
 public class HorarioDisciplinaId implements Serializable {
 
     @Column(name = "curso_id")
-    private Long cursoId;
+    private Long curso;
 
     @Column(name = "disciplina_id")
-    private Long disciplinaId;
+    private Long disciplina;
 
     @Column(name = "horario_id")
-    private Long horarioId;
+    private Long horario;
 
     @Column(name = "dia_id")
-    private Long diaId;
+    private Long dia;
 
     // Getters, setters, hashCode, equals
 
-    public Long getCursoId() {
-        return cursoId;
+    public Long getCurso() {
+        return curso;
     }
 
-    public void setCursoId(Long cursoId) {
-        this.cursoId = cursoId;
+    public void setCurso(Long curso) {
+        this.curso = curso;
     }
 
-    public Long getDisciplinaId() {
-        return disciplinaId;
+    public Long getDisciplina() {
+        return disciplina;
     }
 
-    public void setDisciplinaId(Long disciplinaId) {
-        this.disciplinaId = disciplinaId;
+    public void setDisciplina(Long disciplina) {
+        this.disciplina = disciplina;
     }
 
-    public Long getHorarioId() {
-        return horarioId;
+    public Long getHorario() {
+        return horario;
     }
 
-    public void setHorarioId(Long horarioId) {
-        this.horarioId = horarioId;
+    public void setHorario(Long horario) {
+        this.horario = horario;
     }
 
-    public Long getDiaId() {
-        return diaId;
+    public Long getDia() {
+        return dia;
     }
 
-    public void setDiaId(Long diaId) {
-        this.diaId = diaId;
+    public void setDia(Long dia) {
+        this.dia = dia;
     }
 
     @Override
@@ -60,14 +60,14 @@ public class HorarioDisciplinaId implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HorarioDisciplinaId that = (HorarioDisciplinaId) o;
-        return Objects.equals(cursoId, that.cursoId) &&
-                Objects.equals(disciplinaId, that.disciplinaId) &&
-                Objects.equals(horarioId, that.horarioId) &&
-                Objects.equals(diaId, that.diaId);
+        return Objects.equals(curso, that.curso) &&
+                Objects.equals(disciplina, that.disciplina) &&
+                Objects.equals(horario, that.horario) &&
+                Objects.equals(dia, that.dia);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cursoId, disciplinaId, horarioId, diaId);
+        return Objects.hash(curso, disciplina, horario, dia);
     }
 }

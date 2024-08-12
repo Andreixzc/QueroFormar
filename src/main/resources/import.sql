@@ -425,3 +425,20 @@ INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VAL
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, 52, 4, 6);
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, 53, 4, 6);
 INSERT INTO horario_disciplina (curso_id, disciplina_id, horario_id, dia_id) VALUES (1, 54, 4, 6);
+
+
+INSERT INTO aluno (nome, matricula) VALUES ('Gustavo', '704397');
+INSERT INTO aluno_curso(aluno_id, curso_id)VALUES (1, 1);
+
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 26); -- ALGORITMOS E ESTRUTURAS DE DADOS I
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 27); -- CÁLCULO I
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 28); -- DESENVOLVIMENTO DE INTERFACES WEB
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 29); -- FILOSOFIA: RAZÃO E MODERNIDADE
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 1);  -- INTRODUÇÃO À COMPUTAÇÃO
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 2);  -- LABORATÓRIO DE INICIAÇÃO À PROGRAMAÇÃO
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 3);  -- TRABALHO INTERDISCIPLINAR I: FRONT-END
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 31); -- ARQUITETURA DE COMPUTADORES I
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 5);  -- CULTURA RELIGIOSA: FENÔMENO RELIGIOSO
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 4);  -- ENGENHARIA DE SOFTWARE I
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 32); -- OPTATIVA I
+INSERT INTO aluno_disciplina (aluno_id, disciplina_id) VALUES (1, 33); -- TRABALHO INTERDISCIPLINAR II: BACK-END
