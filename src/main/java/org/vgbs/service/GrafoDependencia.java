@@ -1,5 +1,7 @@
 package org.vgbs.service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import org.vgbs.dto.DisciplinaRestanteDTO;
@@ -12,18 +14,27 @@ public class GrafoDependencia {
     
     public void montarGrafo(List<DisciplinaRestanteDTO> ld){
         ListMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().arrayListValues().build();
-        
+        List<DisciplinaRestanteDTO> listaDr;
         for (DisciplinaRestanteDTO d : ld) {
             multimap.put(d.getDisciplinaRequisitoId(), d);
         }
 
-        var teste = multimap.get(null);
-
+        List<DisciplinaRestanteDTO> disciplinasPossiveis;
+        do{
+            disciplinasPossiveis = multimap.get(null); // disciplinas sem dependencias
+            /*todo
+            * processamento disciplinaPossiveis
+            */
+            for (DisciplinaRestanteDTO dp : disciplinasPossiveis) {
+                multimap.putAll(null, multimap.get(dp.getDisciplinaId()));
+                multimap.removeAll(dp.getDisciplinaId());
+            }
+        }while( disciplinasPossiveis.isEmpty());
     }
     /*
-     * 1-> dr = selecionar disciplinas null
-     * 2-> iterar sobre elemementos de dr e salvar dr.getDisciplinaId()
-     * 3-> multimap.remove(dr.getDisciplinaId()) para cada disciplina removida
-     * 4-> adicionar todas as disciplinas removidas para chave null
+     * 1-> selecionar disciplinas possiveis
+     * 2-> processar disciplinas possiveis
+     * 3-> atualizar dependencias baseada nas disciplinas que foram "concluidas"
+     * 4-> repetir ate que nao disciplinas possiveis seja vazio
      */
 }
