@@ -15,8 +15,9 @@ public class QueroFormarService {
 
     public List<DisciplinaRestanteDTO> listarDisciplinasRestantes(){
         GrafoDependencia gd = new GrafoDependencia();
-        gd.montarGrafo();
-        return qfRepo.findMissingDisciplinas(1L);
+        List<DisciplinaRestanteDTO> listDependencias = qfRepo.findMissingDisciplinas(1L);
+        gd.montarGrafo(listDependencias);
+        return listDependencias;
     }
 }
 

@@ -1,21 +1,24 @@
 package org.vgbs.service;
 
+import java.util.List;
+
 import org.vgbs.dto.DisciplinaRestanteDTO;
 
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.MultimapBuilder;
 
 public class GrafoDependencia {
-    public void montarGrafo(){
+    
+    
+    public void montarGrafo(List<DisciplinaRestanteDTO> ld){
         ListMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().arrayListValues().build();
-        multimap.put(null, new DisciplinaRestanteDTO(1L, "disciplina1", null, null, null, null));
-        multimap.put(null, new DisciplinaRestanteDTO(2L, "disciplina2", null, null, null, null));
         
+        for (DisciplinaRestanteDTO d : ld) {
+            multimap.put(d.getDisciplinaRequisitoId(), d);
+        }
 
         var teste = multimap.get(null);
-        for (DisciplinaRestanteDTO disciplinaRestanteDTO : teste) {
-            System.out.println("testando: " + teste);
-        }
+        var s = teste.stream();
     }
     
 }
