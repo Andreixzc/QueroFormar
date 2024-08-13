@@ -18,7 +18,12 @@ public class GrafoDependencia {
         }
 
         var teste = multimap.get(null);
-        var s = teste.stream();
+
     }
-    
+    /*
+     * 1-> dr = selecionar disciplinas null
+     * 2-> iterar sobre elemementos de dr e salvar dr.getDisciplinaId()
+     * 3-> multimap.remove(dr.getDisciplinaId()) para cada disciplina removida
+     * 4-> adicionar todas as disciplinas removidas para chave null
+     */
 }
