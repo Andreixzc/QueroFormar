@@ -1,7 +1,5 @@
 package org.vgbs.service;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import org.vgbs.dto.DisciplinaRestanteDTO;
@@ -14,22 +12,30 @@ public class GrafoDependencia {
     
     public void montarGrafo(List<DisciplinaRestanteDTO> ld){
         ListMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().arrayListValues().build();
-        List<DisciplinaRestanteDTO> listaDr;
         for (DisciplinaRestanteDTO d : ld) {
             multimap.put(d.getDisciplinaRequisitoId(), d);
         }
 
         List<DisciplinaRestanteDTO> disciplinasPossiveis;
         do{
+            System.out.println("comeco do while");
             disciplinasPossiveis = multimap.get(null); // disciplinas sem dependencias
+
             /*todo
             * processamento disciplinaPossiveis
             */
+            System.out.println("disciplinas Possiveis: " + disciplinasPossiveis);
             for (DisciplinaRestanteDTO dp : disciplinasPossiveis) {
-                multimap.putAll(null, multimap.get(dp.getDisciplinaId()));
-                multimap.removeAll(dp.getDisciplinaId());
+                System.out.println("putAll: " + dp.getDisciplinaNome());
+
+                //multimap.putAll(null, multimap.get(dp.getDisciplinaId()));
+                System.out.println("removeAll: " + dp.getDisciplinaNome());
+
+                //multimap.removeAll(dp.getDisciplinaId());
             }
-        }while( disciplinasPossiveis.isEmpty());
+            disciplinasPossiveis = null;
+        }while( disciplinasPossiveis != null && disciplinasPossiveis.isEmpty());
+        System.out.println("fim do while");
     }
     /*
      * 1-> selecionar disciplinas possiveis
