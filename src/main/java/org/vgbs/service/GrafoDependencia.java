@@ -7,12 +7,13 @@ import org.vgbs.dto.DisciplinaRestanteDTO;
 
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.MultimapBuilder;
+import com.google.common.collect.SetMultimap;
 
 public class GrafoDependencia {
     
     
     public void montarGrafo(List<DisciplinaRestanteDTO> ld){
-        ListMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().arrayListValues().build();
+        SetMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().hashSetValues().build();
         List<List<DisciplinaRestanteDTO>> grade = new ArrayList<>();
 
         for (DisciplinaRestanteDTO d : ld) {
@@ -25,13 +26,15 @@ public class GrafoDependencia {
             multimap.removeAll(null);
             for(var possiveis : tmpPossiveis){
                 var dependencias = multimap.get(possiveis.getDisciplinaId());
-                multimap.putAll(null, dependencias);
+                if(!multimap.containsEntry(null, possiveis.getDisciplinaId())){
+                    multimap.putAll(null, dependencias);
+                }
             }
         }
         for (List<DisciplinaRestanteDTO> semestre : grade) {
             System.out.println("periodo:");
             for (var materia : semestre) {
-                System.out.println("materia: " + materia.getDisciplinaNome());
+                System.out.println("materia: " + materia.getDisciplinaNome() + " id: " + materia.getDisciplinaId());
             }
         }
     }
