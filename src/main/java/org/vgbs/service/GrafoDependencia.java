@@ -1,5 +1,6 @@
 package org.vgbs.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.vgbs.dto.DisciplinaRestanteDTO;
@@ -12,30 +13,27 @@ public class GrafoDependencia {
     
     public void montarGrafo(List<DisciplinaRestanteDTO> ld){
         ListMultimap<Long, DisciplinaRestanteDTO> multimap = MultimapBuilder.hashKeys().arrayListValues().build();
+        List<List<DisciplinaRestanteDTO>> grade = new ArrayList<>();
+
         for (DisciplinaRestanteDTO d : ld) {
             multimap.put(d.getDisciplinaRequisitoId(), d);
         }
 
-        List<DisciplinaRestanteDTO> disciplinasPossiveis;
-        do{
-            System.out.println("comeco do while");
-            disciplinasPossiveis = multimap.get(null); // disciplinas sem dependencias
-
-            /*todo
-            * processamento disciplinaPossiveis
-            */
-            System.out.println("disciplinas Possiveis: " + disciplinasPossiveis);
-            for (DisciplinaRestanteDTO dp : disciplinasPossiveis) {
-                System.out.println("putAll: " + dp.getDisciplinaNome());
-
-                //multimap.putAll(null, multimap.get(dp.getDisciplinaId()));
-                System.out.println("removeAll: " + dp.getDisciplinaNome());
-
-                //multimap.removeAll(dp.getDisciplinaId());
+        for(var disciplinasPossiveis = multimap.get(null); disciplinasPossiveis!=null && !disciplinasPossiveis.isEmpty(); disciplinasPossiveis = multimap.get(null)){
+            var tmpPossiveis = new ArrayList<>(disciplinasPossiveis);
+            grade.add(tmpPossiveis);
+            multimap.removeAll(null);
+            for(var possiveis : tmpPossiveis){
+                var dependencias = multimap.get(possiveis.getDisciplinaId());
+                multimap.putAll(null, dependencias);
             }
-            disciplinasPossiveis = null;
-        }while( disciplinasPossiveis != null && disciplinasPossiveis.isEmpty());
-        System.out.println("fim do while");
+        }
+        for (List<DisciplinaRestanteDTO> semestre : grade) {
+            System.out.println("periodo:");
+            for (var materia : semestre) {
+                System.out.println("materia: " + materia.getDisciplinaNome());
+            }
+        }
     }
     /*
      * 1-> selecionar disciplinas possiveis
