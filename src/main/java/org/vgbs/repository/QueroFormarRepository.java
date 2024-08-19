@@ -19,7 +19,7 @@ public class QueroFormarRepository {
     public List<DisciplinaRestanteDTO> findMissingDisciplinas(Long alunoId) {
         String jpqlQuery = """
             SELECT new DisciplinaRestanteDTO(
-                d.id, d.nome, pr.disciplinaRequisito.id, d2.nome, h.inicio, h.fim)
+                d.id, d.nome, pr.disciplinaRequisito.id, d2.nome, dia.nome, h.inicio, h.fim)
             FROM Disciplina d
             JOIN CursoDisciplina cd ON d.id = cd.disciplina.id
             JOIN AlunoCurso ac ON cd.curso.id = ac.curso.id
@@ -28,6 +28,7 @@ public class QueroFormarRepository {
             LEFT JOIN Disciplina d2 ON pr.disciplinaRequisito.id = d2.id
             LEFT JOIN HorarioDisciplina hd ON hd.disciplina.id = d.id
             LEFT JOIN Horario h ON hd.horario.id = h.id
+            LEFT JOIN Dia dia ON hd.dia.id = dia.id
             WHERE ac.aluno.id = :alunoId
             AND ad.id IS NULL
         """;

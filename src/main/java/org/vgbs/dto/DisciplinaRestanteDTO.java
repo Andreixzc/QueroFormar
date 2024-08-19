@@ -18,18 +18,22 @@ public class DisciplinaRestanteDTO {
     @Column(name = "requisito_nome")
     private String requisitoNome;
 
+    @Column(name = "dia")
+    private String dia;
+
     @Column(name = "inicio")
     private LocalTime inicio;
 
     @Column(name = "fim")
     private LocalTime fim;
-    
+
     public DisciplinaRestanteDTO(Long disciplinaId, String disciplinaNome, Long disciplinaRequisitoId,
-            String requisitoNome, LocalTime inicio, LocalTime fim) {
+            String requisitoNome, String dia, LocalTime inicio, LocalTime fim) {
         this.disciplinaId = disciplinaId;
         this.disciplinaNome = disciplinaNome;
         this.disciplinaRequisitoId = disciplinaRequisitoId;
         this.requisitoNome = requisitoNome;
+        this.dia = dia;
         this.inicio = inicio;
         this.fim = fim;
     }
@@ -66,6 +70,14 @@ public class DisciplinaRestanteDTO {
         this.requisitoNome = requisitoNome;
     }
 
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
     public LocalTime getInicio() {
         return inicio;
     }
@@ -82,4 +94,5 @@ public class DisciplinaRestanteDTO {
         this.fim = fim;
     }
 
+    
 }

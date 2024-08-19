@@ -1,7 +1,10 @@
 package org.vgbs.service;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import org.vgbs.dto.DisciplinaRestanteDTO;
 
@@ -21,16 +24,26 @@ public class GrafoDependencia {
         }
 
         for(var disciplinasPossiveis = multimap.get(null); disciplinasPossiveis!=null && !disciplinasPossiveis.isEmpty(); disciplinasPossiveis = multimap.get(null)){
-            var tmpPossiveis = new ArrayList<>(disciplinasPossiveis);
-            grade.add(tmpPossiveis);
-            multimap.removeAll(null);
+            List<DisciplinaRestanteDTO> tmpPossiveis = new ArrayList<>(disciplinasPossiveis);
+            //grade.add(tmpPossiveis);
+            //multimap.removeAll(null);
+            HashMap<String, DisciplinaRestanteDTO> hp = new HashMap<>();
+            List<DisciplinaRestanteDTO> tmpSemestre = new ArrayList<>();
             for(var possiveis : tmpPossiveis){
-                var dependencias = multimap.get(possiveis.getDisciplinaId());
-                if(!multimap.containsEntry(null, possiveis.getDisciplinaId())){
-                    multimap.putAll(null, dependencias);
-                }
+                //if( hp.get(possiveis.getInicio()) == null) {
+                    //hp.put(possiveis.getInicio(), possiveis);
+                    tmpSemestre.add(possiveis);
+                    System.out.println("possiveis.dia: " + possiveis.getDia());
+                    multimap.remove(null, possiveis);
+                    Set<DisciplinaRestanteDTO> dependencias = multimap.get(possiveis.getDisciplinaId());
+                    if(!multimap.containsEntry(null, possiveis.getDisciplinaId())){
+                        multimap.putAll(null, dependencias);
+                    }
+                //}
             }
+            //grade.add(tmpSemestre);
         }
+
         for (List<DisciplinaRestanteDTO> semestre : grade) {
             System.out.println("periodo:");
             for (var materia : semestre) {
