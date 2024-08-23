@@ -1,9 +1,11 @@
 package org.vgbs.service;
 
+import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 import org.vgbs.dto.DisciplinaRestanteDTO;
 
@@ -29,5 +31,21 @@ public class GradeGrafo {
                 dependencias.add(v);
             } 
         }
-    } 
+    }
+
+    public void kahn(){
+        //int[] indegree = new int[listaAdj.size()];
+        Map<Long, Integer> inDegree = new HashMap<>();
+        for(var entry : this.listaAdj.entrySet()){
+            for (var value :  entry.getValue()) {
+                Integer prev = inDegree.get(value.getDisciplinaId());
+                if(prev == null)
+                    prev = 0;
+                inDegree.put(value.getDisciplinaId(), ++prev);
+            }
+        }
+
+    }
+
+
 }
