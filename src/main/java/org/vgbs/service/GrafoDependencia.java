@@ -12,9 +12,6 @@ public class GrafoDependencia {
         List<List<DisciplinaRestanteDTO>> grade = new ArrayList<>();
     
         GradeGrafo g = new GradeGrafo(ld);
-        for (DisciplinaRestanteDTO d : ld) {
-            g.add(d);
-        }
         
         for(var entry : g.listaAdj.entrySet()){
             Long key = entry.getKey();

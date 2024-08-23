@@ -18,6 +18,7 @@ public class GradeGrafo {
         this.listaAdj = new HashMap<>();
         for(DisciplinaRestanteDTO d : disciplinas){
             listaAdj.put(d.getDisciplinaId(), new ArrayList<>());
+            add(d);
         }
     }
 
