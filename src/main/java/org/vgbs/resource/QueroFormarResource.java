@@ -21,9 +21,6 @@ public class QueroFormarResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         List<DisciplinaRestanteDTO> ldr = queroFormarServ.listarDisciplinasRestantes();
-        for (DisciplinaRestanteDTO teste : ldr) {
-            System.out.println("alo: " + teste.getdisciplina_nome());
-        }
         return "Hello from Quarkus REST";
     }
 }
